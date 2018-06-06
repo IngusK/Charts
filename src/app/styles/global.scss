@@ -1,0 +1,44 @@
+@import "normalize";
+@import "theme";
+
+html, body {
+  font-size: 62.5%;
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: $lato;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: $logo;
+}
+
+h2 {
+  font-family: $lato;
+}
+
+.message {
+  font-size: 2rem;
+  width: 100%;
+  background: $orange;
+  color: $white;
+  padding: 2rem 0;
+  border-radius: .7rem;
+  font-weight: 300;
+  max-width: 128rem;
+  margin: 2rem auto;
+  text-align: center;
+  display: block;
+}
+
+@supports(display: grid) {
+  .message {
+    display: none;
+  }
+}

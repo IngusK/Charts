@@ -1,0 +1,125 @@
+@import "../../../app/styles/_theme.scss";
+
+.main-content {
+  display: block;
+  grid-area: content;
+  margin: 0 auto;
+  max-width: 128rem;
+  width: 100%;
+  position: relative;
+  font-size: 2.2rem;
+  grid-template-rows: auto auto auto 2fr;
+  grid-template-areas:
+                       "slider slider slider"
+                       "content content content";
+  @media #{$tablet} {
+    grid-template-areas: "title title title"
+                         "slider slider slider"
+                         "subtitle subtitle subtitle"
+                         "content content content";
+  }
+  h1 {
+    grid-area: title;
+    margin: 3rem auto 1rem;
+    text-align: center;
+    font-family: $lato;
+    font-size: 2rem;
+    line-height: 3.5rem;
+    width: 100%;
+    display: none;
+    @media #{$tablet} {
+      display: block;
+    }
+  }
+  ul {
+    li {
+      font-size: 2.2rem;
+      line-height: 3.4rem;
+    }
+  }
+
+  .slidecontainer {
+    width: 100%;
+  }
+
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: $grey;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+
+  .slider:hover {
+      opacity: 1;
+  }
+
+  .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 25px;
+      height: 25px;
+      background: $green;
+      cursor: pointer;
+  }
+
+  .slider::-moz-range-thumb {
+      width: 25px;
+      height: 25px;
+      background: $green;
+      cursor: pointer;
+  }
+}
+
+.input-range__slider {
+  appearance: none;
+  background: $green;
+  border: 1px solid $green;
+  border-radius: 100%;
+  cursor: pointer;
+  display: block;
+  height: 2rem;
+  margin-left: -1rem;
+  margin-top: -1.30rem;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  transition: transform 0s ease-out, box-shadow 0s ease-out;
+  width: 2rem;
+}
+
+.input-range__slider-container {
+  transition: left 0s ease-out;
+}
+
+.input-range__track {
+  background: #eeeeee;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  display: block;
+  height: 0.3rem;
+  position: relative;
+  transition: left 0s ease-out, width 0s ease-out;
+}
+
+.input-range__track--active {
+  background: $green;
+}
+
+.input-range__label--min,
+.input-range__label--max {
+  bottom: -2.6rem;
+  position: absolute;
+}
+
+.input-range__label--value {
+  position: absolute;
+  top: -2.8rem;
+}
+
+.input-range__label {
+  font-size: 1rem;
+}

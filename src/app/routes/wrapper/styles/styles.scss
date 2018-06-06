@@ -1,0 +1,10 @@
+@import "../../../../app/styles/_theme.scss";
+
+.grid-wrapper {
+  display: grid;
+  height: 100vh;
+  background: $white;
+  grid-template:
+                ". header header header ." 8rem
+                ". content content content ." 1fr;
+}

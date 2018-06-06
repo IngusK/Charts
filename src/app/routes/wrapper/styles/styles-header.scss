@@ -1,0 +1,76 @@
+@import "../../../../app/styles/_theme.scss";
+
+header {
+  display: block;
+  grid-area: header;
+  padding: 2rem 0 0;
+  font-size: 1.6rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 99;
+  @media #{$tablet} {
+    display: flex;
+    font-size: 1.8rem;
+    border-bottom: 0.1rem solid $ligthGray;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 128rem;
+    text-align: left;
+  }
+}
+
+.logo {
+  color: $black;
+  h1 {
+    font-size: 3rem;
+    font-family: $logo;
+    @media #{$tablet} {
+      font-size: 4rem;
+      span {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-family: $lato;
+  padding: 1rem 0;
+  border-bottom: 0.1rem solid $ligthGray;
+  border-top: 0.1rem solid $ligthGray;
+  margin-top: 1.5rem;
+  @media #{$mobileLarge} {
+    flex-direction: row;
+  }
+  @media #{$tablet} {
+    display: block;
+    text-align: right;
+    padding: 1rem 0 0 0;
+    border: none;
+    margin: 0;
+  }
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 300;
+    li {
+      margin: 0 1rem;
+      @media #{$tablet} {
+        margin: 0 2rem;
+      }
+      a {
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+  }
+}
