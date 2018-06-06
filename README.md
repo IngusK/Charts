@@ -1,4 +1,4 @@
-# Web project starter package
+# Charts practise task
 
 ## The setup includes
 
@@ -14,6 +14,8 @@
 - Normalizer and CSS reset
 - Basic CSS Grid layout to begin a project
 - Using <b>mobile first approach </b>and <b>rem units</b>, calculated for easy px use (for example 1.4rem = 14px)
+
+## The setup guide
 
 You need to have node installed on your computer. Before launching a project make sure you have yarn packages installed. To do that use brew to install yarn and then launch "yarn" command in terminal.
 
